@@ -1,0 +1,9 @@
+.venv/
+model/
+csv_uji/
+__pycache__/
+*.pyc
+hasil_prediksi_uji.csv
+uji_*.py
+probe_negasi.py
+buat_csv_uji.py
