@@ -1,1 +1,26 @@
+# ============================================================
+# .streamlit/config.toml - TEMA (Streamlit 1.67)
+# ============================================================
+[theme]
+base = "light"                          # paksa tema terang, apa pun pengaturan komputer
+primaryColor = "#D96868"                # warna utama: tombol Prediksi, tab aktif, fokus kotak teks
+backgroundColor = "#FFF5F5"             # latar halaman: putih
+secondaryBackgroundColor = "#F7D6D0"    # pink: latar kotak teks, area unggah, dan sejenisnya
+textColor = "#4A4A4A"                   # teks: abu-abu gelap
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap, sans-serif"
+baseFontSize = 20                       # ukuran huruf dasar (standar 16): naikkan/turunkan sesuai selera
+baseRadius = "large"                    # sudut membulat
+buttonRadius = "full"                   # tombol berbentuk kapsul
+borderColor = "#E2B4BD"                 # garis tepi pink
+showSidebarBorder = false
+headingFontSizes = ["2.3rem", "1.6rem", "1.3rem"]   # ukuran judul h1, h2, h3
+headingFontWeights = [800, 700, 700]
 
+[client]
+toolbarMode = "minimal"                 # sembunyikan tombol Deploy dan menu pengembang
+
+[logger]
+level = "error"                         # sembunyikan peringatan kuning yang tidak berbahaya di terminal
+
+[browser]
+gatherUsageStats = false                # jangan kirim statistik penggunaan ke Streamlit
