@@ -73,6 +73,8 @@ footer {visibility: hidden;}
 [data-testid="stMainBlockContainer"] {max-width: 1500px; padding-top: 1.5rem; padding-bottom: 1.5rem;}
 /* pengunggah file: sembunyikan tombol "+" (cukup satu file) */
 [data-testid="stFileUploaderDropzone"] button[aria-label="Add files"] {display: none;}
+/* tabel: sembunyikan ikon "Download as CSV" bawaan Streamlit */
+[data-testid="stElementToolbarButton"]:has(button[aria-label="Download as CSV"]) {display: none;}
 /* tombol Prediksi: besar, warna D96868 */
 button[data-testid="stBaseButton-primary"] {min-height: 4rem; border: none;}
 button[data-testid="stBaseButton-primary"] p {font-size: 1.5rem; font-weight: 700; color: #FFFFFF;}
@@ -161,8 +163,6 @@ def tampil_hasil_banyak(out):
         gaya = gaya.map(lambda v: "color: #B42318; font-weight: 700" if v == "Salah"
                         else ("color: #067647; font-weight: 700" if v == "Benar" else ""), subset=["Hasil"])
     st.dataframe(gaya, hide_index=True, width="stretch", height=480)
-    st.download_button("Unduh hasil (CSV)", out.to_csv(index=False).encode("utf-8-sig"),
-                       file_name="hasil_prediksi.csv", mime="text/csv")
 
 
 # ------------------------------------------------------------
